@@ -99,7 +99,8 @@ class SongGenerator:
             "model": model,
             "messages": [
                 {"role": "user", "content": prompt}
-            ]
+            ],
+            "plugins": []  # Explicitly disable plugins (including web search)
         }
 
         try:
@@ -116,8 +117,12 @@ class SongGenerator:
             print(f"  ✗ API Error: {e}")
             raise
 
-    def generate_songs(self, models: List[Dict[str, Any]], song_input: Dict[str, Any]) -> Dict[str, str]:
-        """Generate song variants using each model"""
+    def generate_songs(self, models: List[Dict[str, Any]], song_input: Dict[str, Any]) -> Tuple[Dict[str, str], List[Dict[str, Any]]]:
+        """Generate song variants using each model
+
+        Returns:
+            Tuple of (songs dict, list of successful models)
+        """
         print("=" * 60)
         print("PHASE 1: GENERATING SONGS")
         print("=" * 60)
@@ -127,6 +132,8 @@ class SongGenerator:
         prompt = writing_template(song_input)
 
         songs = {}
+        successful_models = []
+
         for i, model in enumerate(models, 1):
             model_name = model['name']
             print(f"[{i}/{len(models)}] Generating with {model_name}...")
@@ -134,6 +141,7 @@ class SongGenerator:
             try:
                 song_text = self.call_openrouter(model_name, prompt)
                 songs[model_name] = song_text
+                successful_models.append(model)
                 print(f"  ✓ Generated ({len(song_text)} chars)")
             except Exception as e:
                 print(f"  ✗ Failed: {e}")
@@ -141,11 +149,14 @@ class SongGenerator:
 
             print()
 
-        successful = sum(1 for s in songs.values() if s is not None)
+        successful = len(successful_models)
         print(f"Successfully generated {successful}/{len(models)} songs")
+        if successful < len(models):
+            failed_count = len(models) - successful
+            print(f"  → {failed_count} model(s) will be excluded from evaluation")
         print()
 
-        return songs
+        return songs, successful_models
 
     def evaluate_songs(
         self,
@@ -153,10 +164,21 @@ class SongGenerator:
         songs: Dict[str, str],
         topic: str
     ) -> Dict[str, List[int]]:
-        """Evaluate songs using each model"""
+        """Evaluate songs using each model
+
+        Args:
+            models: List of models to use for evaluation (only successful ones)
+            songs: Dict of generated songs
+            topic: Song topic
+        """
         print("=" * 60)
         print("PHASE 2: EVALUATING SONGS")
         print("=" * 60)
+        print()
+
+        print(f"Using {len(models)} model(s) for evaluation:")
+        for model in models:
+            print(f"  - {model['name']}")
         print()
 
         evaluation_template = self.load_template("evaluation")
@@ -297,7 +319,13 @@ class SongGenerator:
         # Get top 2
         top_2 = sorted_songs[:2]
 
-        print(f"Top 2 songs will be saved to: songs/{output_filename}.md")
+        # Handle .md extension
+        if output_filename.lower().endswith('.md'):
+            final_filename = output_filename
+        else:
+            final_filename = f"{output_filename}.md"
+
+        print(f"Top 2 songs will be saved to: songs/{final_filename}")
         print()
 
         if self.dry_run:
@@ -321,7 +349,7 @@ class SongGenerator:
 
         # Save to file
         SONGS_DIR.mkdir(exist_ok=True)
-        output_file = SONGS_DIR / f"{output_filename}.md"
+        output_file = SONGS_DIR / final_filename
 
         with open(output_file, 'w', encoding='utf-8') as f:
             f.write('\n'.join(output_lines))
@@ -372,7 +400,7 @@ def main():
         song_input = generator.load_song_input(args.input_file)
 
         # Generate songs
-        songs = generator.generate_songs(models, song_input)
+        songs, successful_models = generator.generate_songs(models, song_input)
 
         # Filter out failed generations
         valid_songs = {k: v for k, v in songs.items() if v is not None}
@@ -380,9 +408,9 @@ def main():
             print("Error: Not enough songs generated successfully (need at least 2)")
             sys.exit(1)
 
-        # Evaluate songs
+        # Evaluate songs using only successful models
         evaluations = generator.evaluate_songs(
-            models,
+            successful_models,
             valid_songs,
             song_input['topic']
         )
