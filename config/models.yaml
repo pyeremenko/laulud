@@ -1,0 +1,23 @@
+# Configuration for AI models used in song generation and evaluation
+# Only models with is_enabled: true will be used
+# Model names should match OpenRouter model identifiers
+# See: https://openrouter.ai/docs/models
+
+models:
+  - name: "anthropic/claude-3.5-sonnet"
+    is_enabled: true
+
+  - name: "openai/gpt-4-turbo"
+    is_enabled: true
+
+  - name: "google/gemini-pro-1.5"
+    is_enabled: true
+
+  - name: "meta-llama/llama-3.1-70b-instruct"
+    is_enabled: true
+
+  - name: "anthropic/claude-3-opus"
+    is_enabled: false
+
+  - name: "openai/gpt-4o"
+    is_enabled: false

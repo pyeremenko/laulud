@@ -1,0 +1,30 @@
+# Example song input configuration
+# This file defines the parameters for generating a new song
+
+# Topic of the song (descriptive name)
+topic: "Meie Isa Palve"
+
+# Bible chapter reference
+chapter: "Matthew 6:9-13"
+
+# Verse numbers for the couplets (main song verses)
+couplet_verse_numbers: "9-13"
+
+# The actual text of the Bible verses for couplets
+couplet_verses_text: |
+  9 Teie palvetage nõnda: Meie Isa, kes sa oled taevas! Pühitsetud olgu sinu nimi;
+  10 sinu riik tulgu; sinu tahtmine sündigu, nagu taevas, nõnda ka maa peal;
+  11 meie igapäevast leiba anna meile tänapäev;
+  12 ja anna meile andeks meie võlad, nagu meiegi andeks anname oma võlglastele;
+  13 ja ära saada meid kiusatusse, vaid päästa meid ära kurjast! Sest sinu päralt on riik ja vägi ja au igavesti. Aamen.
+
+# Verse numbers for the chorus
+chorus_verse_numbers: "6"
+
+# The actual text of the Bible verses for chorus
+chorus_verses_text: |
+  6 Aga sina, kui sa palvetad, mine oma kambrisse ja sulge oma uks ning palveta oma Isa poole, kes on saladuses. Ja sinu Isa, kes näeb salajasse, tasub sulle.
+
+# Output filename (without .md extension)
+# The final file will be saved as songs/{output_filename}.md
+output_filename: "meieisapalve_generated"

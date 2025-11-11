@@ -1,0 +1,18 @@
+[project]
+name = "laulud"
+version = "0.1.0"
+description = "Estonian song generation and evaluation using AI models"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pyyaml>=6.0.1",
+    "pybars3>=0.9.7",
+    "requests>=2.31.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = []
