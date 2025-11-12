@@ -11,71 +11,70 @@ Model: anthropic/claude-sonnet-4.5
 ## 1. salm
 
 Meie Isa, kes sa oled taevas kõrges,
-Pühitsetud olgu sinu nimi õrnes!
-Sinu riik see tulgu, sinu tahtmine sündigu,
-Nagu taevas, nõnda ka maa peal seekinnistu!
+Pühitsetud olgu sinu nimi!
+Sinu riik tulgu, sinu tahtmine sündigu,
+Nagu taevas, nõnda ka maa peal!
 
 ## Refrään
 
 Palveta oma Isa poole salajas,
-Sinu Isa, kes näeb salajasse paika,
+Sinu Isa, kes näeb salajasse,
 Palveta oma Isa poole salajas,
-Sinu Isa, kes näeb salajasse, tasub sulle igas ajas!
+Sinu Isa, kes näeb salajasse, tasub sulle igal ajal!
 
 ## 2. salm
 
-Meie igapäevast leiba anna meile tänapäev,
+Meie igapäevast leiba anna meile täna,
 Sinu hoolitsus on uus kui koidiku käes värelev!
-Ja anna meile andeks meie võlad rasked,
-Nagu meiegi andeks anname oma võlglastele lahked!
+Ja anna meile andeks meie rasked võlad,
+Nagu meiegi andeks anname oma võlglastele!
 
 ## Refrään
 
 Palveta oma Isa poole salajas,
-Sinu Isa, kes näeb salajasse paika,
+Sinu Isa, kes näeb salajasse,
 Palveta oma Isa poole salajas,
-Sinu Isa, kes näeb salajasse, tasub sulle igas ajas!
+Sinu Isa, kes näeb salajasse, tasub sulle igal ajal!
 
 ## 3. salm
 
-Ja ära saada meid kiusatusse teel,
-Vaid päästa meid ära kurjast, ole kilbiks meie eel!
-Sest sinu päralt on riik ja vägi kõikuv,
-Ja au igavesti, aamen, meie südames see kõikuv!
+Ja ära saada meid kiusatusse,
+Vaid päästa meid ära kurjast, ole kilbiks meie ees!
+Sest sinu päralt on riik ja vägi ja au igavesti.
+Aamen.
 
 ## Refrään (lõpetus)
 
 Palveta oma Isa poole salajas,
-Sinu Isa, kes näeb salajasse paika,
+Sinu Isa, kes näeb salajasse,
 Palveta oma Isa poole salajas,
 Sinu Isa, kes näeb salajasse, tasub sulle,
-Tasub sulle igas ajas! Aamen.
+Tasub sulle igal ajal! Aamen.
 
 ## Analysis
 
 ### Words
 
-õrnes
+õrnes > ???
 
 ### Grammar (16)
 
 #### Liigne sõna (7)
-taevas kõrges,  taevas,
-nimi õrnes!  nimi!
-riik see  riik
-peal seekinnistu!  peal!
-võlglastele lahked!  võlglastele!
-kiusatusse teel,  kiusatusse,
-meid ära  meid
+taevas kõrges, > taevas,
+nimi õrnes! > nimi!
+riik see > riik
+peal seekinnistu! > peal!
+võlglastele lahked! > võlglastele!
+kiusatusse teel, > kiusatusse,
+meid ära > meid
 
 #### Sõnaasendus (7)
-tänapäev,  täna,
-värelev!  värisev!
-saada  vii
-eel!  eest!
-salajas,  salaja,
-igas ajas!  igal ajal!
-Aamen.  aamen.
+tänapäev, > täna,
+värelev! > värisev!
+saada > vii
+eel! > eest!
+salajas, > salaja,
+igas ajas! > igal ajal!
 
 #### Sõnajärg (1)
 võlad rasked, > rasked võlad,
@@ -139,22 +138,22 @@ paalgi >  palgi.
 ### Grammar (13)
 
 #### Muu parandus (5)
-taeva võlvil,  kes sa oled taevas,
-igapäeva,  iga päev, armasta
-andestame mõlad.  meiegi andestame oma võlgadele.
-Ära saada  Ja ära vii
-Pühaduse rahus,  pühaduse rahus, et
+taeva võlvil, >  kes sa oled taevas,
+igapäeva, > iga päev, armasta
+andestame mõlad. > meiegi andestame oma võlgadele.
+Ära saada > Ja ära vii
+Pühaduse rahus, > pühaduse rahus, et
 
 #### Sõnaasendus (5)
-nimil.  nimi.
-tahe täitku  tahtmine täitugu
-paalgi.  palgi.
-varjusesse!  varjus!
-salajas,  salaja,
+nimil. > nimi.
+tahe täitku > tahtmine täitugu
+paalgi. > palgi.
+varjusesse! > varjus!
+salajas, > salaja,
 
 #### Liigne sõna (2)
-riik meil  riik
-südant armast laeva.  südant.
+riik meil > riik
+südant armast laeva. > südant.
 
 #### Puuduv sõna (1)
 Anna > Anna meile
