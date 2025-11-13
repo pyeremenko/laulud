@@ -8,42 +8,42 @@ Model: anthropic/claude-sonnet-4.5
 
 # Meie Isa Palve (Laul)
 
-## 1. salm
+[Verse 1]
 
 Meie Isa, kes sa oled taevas kõrges,
 Pühitsetud olgu sinu nimi!
 Sinu riik tulgu, sinu tahtmine sündigu,
 Nagu taevas, nõnda ka maa peal!
 
-## Refrään
+[Chorus]
 
 Palveta oma Isa poole salajas,
 Sinu Isa, kes näeb salajasse,
 Palveta oma Isa poole salajas,
 Sinu Isa, kes näeb salajasse, tasub sulle igal ajal!
 
-## 2. salm
+[Verse 2]
 
 Meie igapäevast leiba anna meile täna,
 Sinu hoolitsus on uus kui koidiku käes värelev!
 Ja anna meile andeks meie rasked võlad,
 Nagu meiegi andeks anname oma võlglastele!
 
-## Refrään
+[Chorus]
 
 Palveta oma Isa poole salajas,
 Sinu Isa, kes näeb salajasse,
 Palveta oma Isa poole salajas,
 Sinu Isa, kes näeb salajasse, tasub sulle igal ajal!
 
-## 3. salm
+[Verse 3]
 
 Ja ära saada meid kiusatusse,
 Vaid päästa meid ära kurjast, ole kilbiks meie ees!
 Sest sinu päralt on riik ja vägi ja au igavesti.
 Aamen.
 
-## Refrään (lõpetus)
+[Chorus]
 
 Palveta oma Isa poole salajas,
 Sinu Isa, kes näeb salajasse,
