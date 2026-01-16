@@ -36,6 +36,8 @@ Sinu Isa, kes näeb salajasse,
 Palveta oma Isa poole salajas,
 Sinu Isa, kes näeb salajasse, tasub sulle igal ajal!
 
+[Interlude]
+
 [Verse 3]
 
 Ja ära saada meid kiusatusse,
